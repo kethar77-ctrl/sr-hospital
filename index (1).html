@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>S.R. Hospital and Neocare | Neonatal, Pediatric &amp; Family Healthcare in Kovilpatti</title>
+  <meta name="description" content="Trusted Neonatal Care, Pediatrics, Maternity & Family Healthcare at S.R. Hospital and Neocare, Puthu Road, Near Reliance Petrol Bunk, Kovilpatti. Book OP appointments on WhatsApp." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+  <!-- Google Fonts: Inter for crisp clinical legibility & Plus Jakarta Sans for warm medical headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind Custom Medical Theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            medical: {
+              teal: '#0d9488',      // Primary Clinical Teal (teal-600)
+              tealDark: '#0f766e',  // Deep Teal Hover (teal-700)
+              tealLight: '#f0fdfa', // Soft Mint Surface (teal-50)
+              navy: '#0f172a',      // Authoritative Slate Navy (slate-900)
+              muted: '#475569',     // Readable Clinical Slate (slate-600)
+              border: '#e2e8f0',    // Clean Divider Border (slate-200)
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Subtle medical cross / dot backdrop for hero depth */
+    .bg-medical-pattern {
+      background-image: radial-gradient(rgba(13, 148, 136, 0.12) 1.2px, transparent 1.2px);
+      background-size: 24px 24px;
+    }
+
+    html{scroll-padding-top:90px}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+    @keyframes blob{0%,100%{border-radius:60% 40% 55% 45%/50% 60% 40% 50%;transform:translate(0,0) rotate(0)}50%{border-radius:40% 60% 45% 55%/60% 40% 60% 40%;transform:translate(30px,-20px) rotate(25deg)}}
+    @keyframes shine{from{transform:translateX(-120%) skewX(-20deg)}to{transform:translateX(320%) skewX(-20deg)}}
+    @keyframes ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}100%{box-shadow:0 0 0 22px rgba(37,211,102,0)}}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+    @keyframes gradmove{0%{background-position:0 50%}100%{background-position:200% 50%}}
+    .float-a{animation:floaty 6s ease-in-out infinite}.float-b{animation:floaty 7.5s ease-in-out -2s infinite}
+    .blob{position:absolute;filter:blur(60px);opacity:.45;animation:blob 14s ease-in-out infinite;pointer-events:none}
+    .grad-text{background:linear-gradient(90deg,#0d9488,#0891b2,#10b981,#0d9488);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradmove 6s linear infinite}
+    .btn-shine{position:relative;overflow:hidden;isolation:isolate}
+    .btn-shine::after{content:"";position:absolute;top:0;left:0;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:translateX(-120%) skewX(-20deg)}
+    .btn-shine:hover::after{animation:shine .9s ease}
+    .btn-shine:hover{transform:translateY(-2px);box-shadow:0 14px 28px -8px rgba(13,148,136,.55)}
+    .btn-shine:active{transform:translateY(0) scale(.98)}
+    .ripple-dot{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);animation:rip .6s linear;pointer-events:none}
+    @keyframes rip{to{transform:scale(4);opacity:0}}
+    .reveal{opacity:0;transform:translateY(28px) scale(.98);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+    .reveal.in{opacity:1;transform:none}
+    .tilt{transition:opacity .7s ease,transform .25s ease,box-shadow .25s ease,border-color .25s,background-color .25s;transform-style:preserve-3d}
+    .gal{position:relative;overflow:hidden;border-radius:1.25rem}
+    .gal img{transition:transform .8s ease;width:100%;height:100%;object-fit:cover}
+    .gal:hover img{transform:scale(1.12) rotate(1deg)}
+    .gal .cap{position:absolute;inset:auto 0 0 0;padding:2.5rem 1rem 1rem;background:linear-gradient(transparent,rgba(15,23,42,.85));color:#fff;font-weight:700;transform:translateY(40%);opacity:.9;transition:transform .4s ease}
+    .gal:hover .cap{transform:none}
+    .marquee-track{display:flex;gap:3rem;width:max-content;animation:marquee 28s linear infinite}
+    .marquee:hover .marquee-track{animation-play-state:paused}
+    details.faq summary{list-style:none;cursor:pointer}details.faq summary::-webkit-details-marker{display:none}
+    details.faq[open] .chev{transform:rotate(180deg)}details.faq .chev{transition:transform .3s}
+    details.faq[open] .ans{animation:fadein .4s ease}
+    @keyframes fadein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+    #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#0d9488,#22d3ee,#34d399);z-index:100}
+    #to-top{position:fixed;bottom:5.5rem;right:1.25rem;z-index:50;opacity:0;pointer-events:none;transform:translateY(12px);transition:.3s}
+    #to-top.show{opacity:1;pointer-events:auto;transform:none}
+    .wa-ring{animation:ring 2s infinite}
+    :focus-visible{outline:3px solid #0d9488;outline-offset:3px}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-medical-teal selection:text-white overflow-x-hidden">
+
+  <!-- ===================================================================== -->
+  <!-- 1. TOP EMERGENCY & RECEPTION BAR                                      -->
+  <!-- ===================================================================== -->
+  <div class="bg-medical-navy text-white text-xs sm:text-sm border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <!-- Address & 24/7 Care Status -->
+      <div class="flex items-center gap-2 text-slate-200 text-center sm:text-left">
+        <span class="inline-flex items-center gap-1.5 bg-rose-600/20 border border-rose-500/40 text-rose-300 font-semibold text-[11px] uppercase tracking-wider px-2.5 py-0.5 rounded-full shrink-0">
+          <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+          24/7 Care
+        </span>
+        <span data-hospital-short-address class="truncate">
+          Puthu Road, Near Reliance Petrol Bunk, Kovilpatti 628501
+        </span>
+      </div>
+
+      <!-- One-Tap Emergency / Reception Call Link -->
+      <div class="flex items-center gap-4 shrink-0">
+        <a
+          id="top-call-link"
+          href="tel:+919677957693"
+          class="inline-flex items-center gap-2 font-semibold text-teal-300 hover:text-white transition-colors"
+        >
+          <svg class="w-4 h-4 text-teal-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>Emergency &amp; Reception: <strong data-hospital-phone-display class="text-white">+91 96779 57693</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 2. STICKY MEDICAL HEADER & NAVIGATION                                 -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Hospital Brand Mark -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-teal-600 to-cyan-600 flex items-center justify-center text-white shadow-md shadow-teal-600/20 group-hover:scale-105 transition-transform shrink-0">
+            <!-- Medical Cross + Heart Care SVG Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+              <rect x="3" y="3" width="18" height="18" rx="4" stroke-width="2" />
+            </svg>
+          </div>
+          <div>
+            <span data-hospital-name class="font-heading text-base sm:text-xl font-extrabold text-medical-navy block leading-tight">
+              S.R. Hospital and Neocare
+            </span>
+            <span data-hospital-tagline class="text-[11px] font-semibold tracking-wider uppercase text-medical-teal block mt-0.5">
+              Neonatal • Pediatric • Family Care • Kovilpatti
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <a href="#departments" class="hover:text-medical-teal transition-colors">Departments</a>
+          <a href="#doctors" class="hover:text-medical-teal transition-colors">Doctors &amp; OP Timings</a>
+          <a href="#appointment" class="hover:text-medical-teal transition-colors">Book Appointment</a>
+          <a href="#location" class="hover:text-medical-teal transition-colors">Location &amp; Contact</a>
+        </nav>
+
+        <!-- Header CTAs & Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <a
+            href="#appointment"
+            class="hidden sm:inline-flex items-center gap-2 bg-medical-teal hover:bg-medical-tealDark text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-all shadow-sm shadow-teal-600/20"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Book OP Visit
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle Menu"
+            class="lg:hidden p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-medical-teal focus:outline-none cursor-pointer"
+          >
+            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+      <a href="#departments" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-teal-50 hover:text-medical-teal">Departments &amp; Treatments</a>
+      <a href="#doctors" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-teal-50 hover:text-medical-teal">Doctors &amp; OP Timings</a>
+      <a href="#appointment" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-teal-50 hover:text-medical-teal">Book OP Appointment</a>
+      <a href="#location" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-teal-50 hover:text-medical-teal">Location &amp; Contact</a>
+      <div class="pt-2">
+        <button
+          type="button"
+          onclick="openWhatsAppGeneral('Hello S.R. Hospital and Neocare, I would like to book an OP appointment.')"
+          class="w-full flex items-center justify-center gap-2 bg-medical-teal hover:bg-medical-tealDark text-white font-semibold py-3 rounded-xl shadow-sm cursor-pointer"
+        >
+          Book Appointment on WhatsApp
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- 3. TRUSTWORTHY MEDICAL HERO SECTION                                   -->
+  <!-- ===================================================================== -->
+  <section class="relative bg-gradient-to-b from-teal-50/80 via-white to-slate-50 bg-medical-pattern border-b border-slate-200/80 overflow-hidden">
+    <div class="blob w-72 h-72 bg-teal-300 -top-16 -left-16"></div><div class="blob w-80 h-80 bg-cyan-300 bottom-0 right-0" style="animation-delay:-5s"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Content Column (7 cols) -->
+        <div class="lg:col-span-7">
+          <!-- Patient Trust Pill -->
+          <div class="inline-flex items-center gap-2.5 bg-white border border-teal-200 rounded-full px-4 py-1.5 shadow-sm mb-6">
+            <span class="text-amber-500 font-bold text-sm">4.8 ★</span>
+            <span class="h-3.5 w-px bg-slate-200"></span>
+            <span data-rating-text class="text-xs sm:text-sm font-semibold text-slate-700">
+              Trusted by 100+ Families in Kovilpatti
+            </span>
+          </div>
+
+          <h1 class="font-heading text-3xl sm:text-5xl lg:text-[52px] font-extrabold text-medical-navy leading-[1.12] tracking-tight">
+            Compassionate <span class="grad-text">Neonatal, Pediatric</span> &amp; Family Healthcare in Kovilpatti
+          </h1>
+
+          <p class="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+            At <strong class="text-slate-900">S.R. Hospital and Neocare</strong>, we combine specialized newborn &amp; child medical care with warm, attentive treatment for the entire family—conveniently located on Puthu Road near Reliance Petrol Bunk.
+          </p>
+
+          <!-- Primary & Secondary Hero Buttons -->
+          <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a
+              href="#appointment"
+              class="inline-flex items-center justify-center gap-2.5 bg-medical-teal hover:bg-medical-tealDark text-white font-semibold text-base px-7 py-4 rounded-xl transition-all shadow-lg shadow-teal-600/20"
+            >
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+              Book OP Appointment on WhatsApp
+            </a>
+
+            <a
+              id="hero-call-link"
+              href="tel:+919677957693"
+              class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold text-base px-7 py-4 rounded-xl transition-colors shadow-sm"
+            >
+              <svg class="w-5 h-5 text-medical-teal" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call Reception Now
+            </a>
+          </div>
+
+          <!-- Clinical Pillars -->
+          <div class="mt-10 grid grid-cols-3 gap-4 pt-8 border-t border-slate-200/80 max-w-xl">
+            <div>
+              <p class="font-heading text-xl sm:text-2xl font-extrabold text-medical-navy">NICU &amp; Child</p>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Specialized Newborn Care</p>
+            </div>
+            <div>
+              <p class="font-heading text-xl sm:text-2xl font-extrabold text-medical-teal">24/7 Care</p>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Emergency &amp; Inpatient</p>
+            </div>
+            <div>
+              <p class="font-heading text-xl sm:text-2xl font-extrabold text-medical-navy">In-House Lab</p>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Diagnostics &amp; Pharmacy</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl p-3">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM5OWY2ZTQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyMmQzZWUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY1MCIgY3k9IjExMCIgcj0iMTUwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMTgiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSI1MjAiIHI9IjE5MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjE0Ii8+PHJlY3QgeD0iMTgwIiB5PSIyMzAiIHdpZHRoPSI0NDAiIGhlaWdodD0iMzAwIiByeD0iMTgiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIzNDAiIHk9IjQwMCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMzAiIHJ4PSIxMCIgZmlsbD0iI2NjZmJmMSIvPjxyZWN0IHg9IjIxNSIgeT0iMjY1IiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHJ4PSI4IiBmaWxsPSIjY2NmYmYxIi8+PHJlY3QgeD0iMjE1IiB5PSIzNDUiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgcng9IjgiIGZpbGw9IiNjY2ZiZjEiLz48cmVjdCB4PSI1MzUiIHk9IjI2NSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iOCIgZmlsbD0iI2NjZmJmMSIvPjxyZWN0IHg9IjUzNSIgeT0iMzQ1IiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHJ4PSI4IiBmaWxsPSIjY2NmYmYxIi8+PHJlY3QgeD0iMzY1IiB5PSI5MCIgd2lkdGg9IjcwIiBoZWlnaHQ9IjE3MCIgcng9IjE0IiBmaWxsPSIjMGQ5NDg4Ii8+PHJlY3QgeD0iMzE1IiB5PSIxNDAiIHdpZHRoPSIxNzAiIGhlaWdodD0iNzAiIHJ4PSIxNCIgZmlsbD0iIzBkOTQ4OCIvPjwvc3ZnPg=="
+              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ccfbf1'/%3E%3Cstop offset='1' stop-color='%2367e8f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Cpath d='M400 220v160M320 300h160' stroke='%230d9488' stroke-width='28' stroke-linecap='round'/%3E%3C/svg%3E'"
+              alt="Clean modern hospital consultation and neonatal care facility"
+              class="w-full h-72 sm:h-96 object-cover rounded-2xl"
+            />
+            <div class="float-a absolute top-8 left-8 bg-white/95 backdrop-blur rounded-2xl shadow-xl px-4 py-2.5 flex items-center gap-2.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span><span class="text-xs font-bold text-slate-800">NICU open 24/7</span>
+            </div>
+            <div class="float-b absolute bottom-32 right-8 bg-white/95 backdrop-blur rounded-2xl shadow-xl px-4 py-2.5">
+              <p class="text-[11px] text-slate-500 font-semibold">Patient rating</p><p class="text-sm font-extrabold text-amber-500">4.8 ★★★★★</p>
+            </div>
+            <!-- Floating Quick Info Card -->
+            <div class="mt-3 bg-teal-50/90 border border-teal-100 rounded-2xl p-4 flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-medical-teal">OP Consultation Desk</p>
+                <p data-op-summary class="text-sm font-bold text-slate-900 mt-0.5">Morning: 9:30 AM – 1:30 PM • Evening: 5:30 PM – 9:00 PM</p>
+              </div>
+              <a
+                href="#doctors"
+                class="shrink-0 bg-white text-medical-teal border border-teal-200 hover:bg-medical-teal hover:text-white text-xs font-bold px-3.5 py-2 rounded-xl transition-colors"
+              >
+                Timings →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. DEPARTMENTS & TREATMENTS GRID (5 CARDS)                            -->
+  <!-- ===================================================================== -->
+
+  <!-- STATS BAND + MARQUEE -->
+  <section class="relative bg-gradient-to-r from-medical-navy via-teal-900 to-medical-navy text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="reveal"><p class="font-heading text-4xl sm:text-5xl font-extrabold"><span data-count="24">0</span>/7</p><p class="text-teal-200 text-sm mt-1">Emergency &amp; inpatient care</p></div>
+      <div class="reveal"><p class="font-heading text-4xl sm:text-5xl font-extrabold"><span data-count="100">0</span>+</p><p class="text-teal-200 text-sm mt-1">Families who trust us</p></div>
+      <div class="reveal"><p class="font-heading text-4xl sm:text-5xl font-extrabold"><span data-count="5">0</span></p><p class="text-teal-200 text-sm mt-1">Departments under one roof</p></div>
+      <div class="reveal"><p class="font-heading text-4xl sm:text-5xl font-extrabold"><span data-count="4.8" data-dec="1">0</span>★</p><p class="text-teal-200 text-sm mt-1">Average patient rating</p></div>
+    </div>
+    <div class="marquee border-t border-white/10 py-3 overflow-hidden"><div class="marquee-track text-sm font-semibold text-teal-100 whitespace-nowrap">
+      <span>Newborn jaundice phototherapy</span><span>Vaccinations</span><span>Antenatal checkups</span><span>Normal &amp; surgical delivery</span><span>Blood tests &amp; ECG</span><span>On-site pharmacy</span><span>Fever &amp; respiratory care</span><span>Diabetes &amp; BP care</span>
+      <span>Newborn jaundice phototherapy</span><span>Vaccinations</span><span>Antenatal checkups</span><span>Normal &amp; surgical delivery</span><span>Blood tests &amp; ECG</span><span>On-site pharmacy</span><span>Fever &amp; respiratory care</span><span>Diabetes &amp; BP care</span>
+    </div></div>
+  </section>
+
+  <section id="departments" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-widest text-medical-teal">Clinical Specialties</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-medical-navy mt-2">
+          Departments &amp; Medical Services
+        </h2>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">
+          Comprehensive newborn, pediatric, maternity, and general medical services under one roof in Kovilpatti.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Department 1: Neonatal & NICU Care -->
+        <div class="bg-slate-50/70 hover:bg-white border border-slate-200 hover:border-teal-300 rounded-2xl p-6 sm:p-7 transition-all hover:shadow-lg hover:shadow-teal-900/5">
+          <div class="w-12 h-12 rounded-2xl bg-teal-100 text-medical-teal flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-medical-navy mt-5">Neonatal &amp; NICU Care</h3>
+          <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+            Dedicated newborn intensive care unit equipped with warmers, phototherapy for neonatal jaundice, preterm baby monitoring, and gentle newborn stabilization.
+          </p>
+          <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-semibold text-medical-teal">
+            <span>24/7 Newborn Monitoring</span>
+            <span>Neocare Unit</span>
+          </div>
+        </div>
+
+        <!-- Department 2: Pediatrics & Child Care -->
+        <div class="bg-slate-50/70 hover:bg-white border border-slate-200 hover:border-teal-300 rounded-2xl p-6 sm:p-7 transition-all hover:shadow-lg hover:shadow-teal-900/5">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-medical-navy mt-5">Pediatrics &amp; Child Care</h3>
+          <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+            Complete infant, toddler, and adolescent healthcare including immunization &amp; vaccination schedules, childhood fever &amp; respiratory care, and growth assessments.
+          </p>
+          <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-semibold text-cyan-700">
+            <span>Vaccination &amp; Growth</span>
+            <span>Child Specialist</span>
+          </div>
+        </div>
+
+        <!-- Department 3: Maternity & Women's Health -->
+        <div class="bg-slate-50/70 hover:bg-white border border-slate-200 hover:border-teal-300 rounded-2xl p-6 sm:p-7 transition-all hover:shadow-lg hover:shadow-teal-900/5">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-medical-navy mt-5">Maternity &amp; Women's Health</h3>
+          <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+            Antenatal pregnancy checkups, high-risk pregnancy support, safe normal &amp; surgical deliveries, postnatal mother-baby care, and gynecological consultations.
+          </p>
+          <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-semibold text-emerald-700">
+            <span>Mother &amp; Baby Care</span>
+            <span>Antenatal &amp; Postnatal</span>
+          </div>
+        </div>
+
+        <!-- Department 4: General Medicine -->
+        <div class="bg-slate-50/70 hover:bg-white border border-slate-200 hover:border-teal-300 rounded-2xl p-6 sm:p-7 transition-all hover:shadow-lg hover:shadow-teal-900/5">
+          <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-medical-navy mt-5">General Medicine</h3>
+          <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+            Diagnosis and management of seasonal fevers, diabetes, hypertension, thyroid conditions, respiratory infections, and preventive family health checkups.
+          </p>
+          <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-semibold text-sky-700">
+            <span>All Age Groups</span>
+            <span>Outpatient &amp; Inpatient</span>
+          </div>
+        </div>
+
+        <!-- Department 5: Diagnostics & Pharmacy -->
+        <div class="bg-slate-50/70 hover:bg-white border border-slate-200 hover:border-teal-300 rounded-2xl p-6 sm:p-7 transition-all hover:shadow-lg hover:shadow-teal-900/5 sm:col-span-2 lg:col-span-2">
+          <div class="flex flex-col sm:flex-row sm:items-start gap-5">
+            <div class="w-12 h-12 rounded-2xl bg-teal-100 text-medical-teal flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="font-heading text-xl font-bold text-medical-navy">In-House Diagnostics &amp; Pharmacy</h3>
+                <span class="text-xs font-bold bg-teal-50 text-medical-teal border border-teal-200 px-3 py-1 rounded-full">Fast Reports &amp; Genuine Medicines</span>
+              </div>
+              <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                Accurate blood tests, newborn screening panels, ECG, and on-site pharmacy stocked with pediatric syrups, vaccines, and essential prescription medicines—saving families extra travel across town.
+              </p>
+              <div class="mt-5 pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-3 text-xs font-semibold text-medical-teal">
+                <span>• Clinical Pathology Lab</span>
+                <span>• Pediatric &amp; Maternal Pharmacy</span>
+                <button
+                  type="button"
+                  onclick="selectDepartmentAndScroll('Diagnostics & Lab')"
+                  class="text-medical-navy hover:text-medical-teal underline cursor-pointer"
+                >
+                  Book Lab / OP Visit →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. DOCTORS & OP CONSULTATION TIMINGS                                  -->
+  <!-- ===================================================================== -->
+
+  <!-- GALLERY -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto reveal"><h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-medical-navy">A calm, clean place to heal</h2>
+      <p class="text-slate-600 mt-3 text-sm sm:text-base">Take a look at the spaces where your family will be cared for.</p></div>
+      <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[180px] sm:auto-rows-[230px]">
+        <div class="gal reveal row-span-2"><img loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmYmNmZTgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhNWYzZmMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY1MCIgY3k9IjExMCIgcj0iMTUwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMTgiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSI1MjAiIHI9IjE5MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjE0Ii8+PHJlY3QgeD0iMTcwIiB5PSIzMzAiIHdpZHRoPSI0NjAiIGhlaWdodD0iMTcwIiByeD0iMjQiIGZpbGw9IiNmZmYiLz48cmVjdCB4PSIxOTAiIHk9IjMwMCIgd2lkdGg9IjQyMCIgaGVpZ2h0PSI5MCIgcng9IjQwIiBmaWxsPSIjZmRlNjhhIi8+PGNpcmNsZSBjeD0iNDAwIiBjeT0iMjcwIiByPSI5NSIgZmlsbD0iI2ZlZDdhYSIvPjxjaXJjbGUgY3g9IjM2NSIgY3k9IjI2MiIgcj0iOSIgZmlsbD0iIzQ3NTU2OSIvPjxjaXJjbGUgY3g9IjQzNSIgY3k9IjI2MiIgcj0iOSIgZmlsbD0iIzQ3NTU2OSIvPjxwYXRoIGQ9Ik0zNzAgMzAwcTMwIDI4IDYwIDAiIHN0cm9rZT0iI2JlMTg1ZCIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzUwIDE5MHE1MC01MCAxMDAgMCIgc3Ryb2tlPSIjYjQ1MzA5IiBzdHJva2Utd2lkdGg9IjEwIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ccfbf1'/%3E%3Cstop offset='1' stop-color='%2367e8f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Cpath d='M400 220v160M320 300h160' stroke='%230d9488' stroke-width='28' stroke-linecap='round'/%3E%3C/svg%3E'" alt="Newborn care" /><div class="cap">Gentle newborn care</div></div>
+        <div class="gal reveal"><img loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiYWU2ZmQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM1ZWVhZDQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY1MCIgY3k9IjExMCIgcj0iMTUwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMTgiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSI1MjAiIHI9IjE5MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjE0Ii8+PHBhdGggZD0iTTI4MCAxNTB2MTcwYTkwIDkwIDAgMCAwIDE4MCAwVjE1MCIgc3Ryb2tlPSIjMGYxNzJhIiBzdHJva2Utd2lkdGg9IjIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzcwIDQxMHY1MGE4MCA4MCAwIDAgMCAxNjAgMHYtODAiIHN0cm9rZT0iIzBmMTcyYSIgc3Ryb2tlLXdpZHRoPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iNTMwIiBjeT0iMzY1IiByPSI0MiIgZmlsbD0iIzBkOTQ4OCIvPjxjaXJjbGUgY3g9IjUzMCIgY3k9IjM2NSIgcj0iMTgiIGZpbGw9IiNmZmYiLz48L3N2Zz4=" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ccfbf1'/%3E%3Cstop offset='1' stop-color='%2367e8f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Cpath d='M400 220v160M320 300h160' stroke='%230d9488' stroke-width='28' stroke-linecap='round'/%3E%3C/svg%3E'" alt="Consultation" /><div class="cap">Consultation rooms</div></div>
+        <div class="gal reveal row-span-2"><img loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNhN2YzZDAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2N2U4ZjkiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY1MCIgY3k9IjExMCIgcj0iMTUwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMTgiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSI1MjAiIHI9IjE5MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjE0Ii8+PHBhdGggZD0iTTM0MCAxMzBoMTIwdjE0MGw5MCAxNzBhNDAgNDAgMCAwIDEtMzYgNjBIMjg2YTQwIDQwIDAgMCAxLTM2LTYwbDkwLTE3MHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMzAwIDQwMGgyMDBsNDUgODBhMjIgMjIgMCAwIDEtMjAgMzJIMjc1YTIyIDIyIDAgMCAxLTIwLTMyeiIgZmlsbD0iIzE0YjhhNiIvPjxjaXJjbGUgY3g9IjM3MCIgY3k9IjQ0MCIgcj0iMTQiIGZpbGw9IiNmZmYiLz48Y2lyY2xlIGN4PSI0MzAiIGN5PSI0MjAiIHI9IjEwIiBmaWxsPSIjZmZmIi8+PC9zdmc+" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ccfbf1'/%3E%3Cstop offset='1' stop-color='%2367e8f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Cpath d='M400 220v160M320 300h160' stroke='%230d9488' stroke-width='28' stroke-linecap='round'/%3E%3C/svg%3E'" alt="In-house lab" /><div class="cap">In-house lab</div></div>
+        <div class="gal reveal"><img loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNkZGQ2ZmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM5OWY2ZTQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY1MCIgY3k9IjExMCIgcj0iMTUwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMTgiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSI1MjAiIHI9IjE5MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjE0Ii8+PHJlY3QgeD0iMTUwIiB5PSIzMzAiIHdpZHRoPSI1MDAiIGhlaWdodD0iOTAiIHJ4PSIyMCIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjE3MCIgeT0iMjgwIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjcwIiByeD0iMzAiIGZpbGw9IiNjN2QyZmUiLz48cmVjdCB4PSIxNzAiIHk9IjQyMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjkwIiBmaWxsPSIjMGY3NjZlIi8+PHJlY3QgeD0iNjEyIiB5PSI0MjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI5MCIgZmlsbD0iIzBmNzY2ZSIvPjxyZWN0IHg9IjQyMCIgeT0iMTQwIiB3aWR0aD0iMTQiIGhlaWdodD0iMjAwIiBmaWxsPSIjMGY3NjZlIi8+PHJlY3QgeD0iNDIwIiB5PSIxNDAiIHdpZHRoPSIxMTAiIGhlaWdodD0iMTQiIGZpbGw9IiMwZjc2NmUiLz48cmVjdCB4PSI1MTAiIHk9IjE1NCIgd2lkdGg9IjcwIiBoZWlnaHQ9IjkwIiByeD0iMTIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii45Ii8+PHJlY3QgeD0iNTI4IiB5PSIxNzUiIHdpZHRoPSIzNCIgaGVpZ2h0PSI4IiBmaWxsPSIjMGQ5NDg4Ii8+PC9zdmc+" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ccfbf1'/%3E%3Cstop offset='1' stop-color='%2367e8f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Cpath d='M400 220v160M320 300h160' stroke='%230d9488' stroke-width='28' stroke-linecap='round'/%3E%3C/svg%3E'" alt="Hospital ward" /><div class="cap">Comfortable wards</div></div>
+        <div class="gal reveal col-span-2 lg:col-span-1"><img loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNlMGYyZmUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2ZWU3YjciLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY1MCIgY3k9IjExMCIgcj0iMTUwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMTgiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSI1MjAiIHI9IjE5MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjE0Ii8+PHBhdGggZD0iTTMwMCAxODBoMjAwbDE1MCAzNDBIMTUweiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0zNjAgMjIwaDgwbDYwIDMwMEgzMDB6IiBmaWxsPSIjOTlmNmU0Ii8+PHJlY3QgeD0iMTkwIiB5PSIzMzAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI5MCIgcng9IjYiIGZpbGw9IiMwZDk0ODgiLz48cmVjdCB4PSI1NzAiIHk9IjMzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjkwIiByeD0iNiIgZmlsbD0iIzBkOTQ4OCIvPjwvc3ZnPg==" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ccfbf1'/%3E%3Cstop offset='1' stop-color='%2367e8f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Cpath d='M400 220v160M320 300h160' stroke='%230d9488' stroke-width='28' stroke-linecap='round'/%3E%3C/svg%3E'" alt="Hospital corridor" /><div class="cap">Easy-access floors</div></div>
+        <div class="gal reveal col-span-2 lg:col-span-1"><img loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZGU2OGEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZGE0YWYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY1MCIgY3k9IjExMCIgcj0iMTUwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuMTgiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSI1MjAiIHI9IjE5MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjE0Ii8+PGNpcmNsZSBjeD0iNDAwIiBjeT0iMjMwIiByPSIxMDAiIGZpbGw9IiNkNmE1NmIiLz48Y2lyY2xlIGN4PSIzMjAiIGN5PSIxNTAiIHI9IjQyIiBmaWxsPSIjZDZhNTZiIi8+PGNpcmNsZSBjeD0iNDgwIiBjeT0iMTUwIiByPSI0MiIgZmlsbD0iI2Q2YTU2YiIvPjxjaXJjbGUgY3g9IjM2NSIgY3k9IjIxNSIgcj0iMTAiIGZpbGw9IiMzMzQxNTUiLz48Y2lyY2xlIGN4PSI0MzUiIGN5PSIyMTUiIHI9IjEwIiBmaWxsPSIjMzM0MTU1Ii8+PGVsbGlwc2UgY3g9IjQwMCIgY3k9IjI2MCIgcng9IjMwIiByeT0iMjIiIGZpbGw9IiNmNWRlYjMiLz48cmVjdCB4PSIzMDAiIHk9IjMzMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxOTAiIHJ4PSI3MCIgZmlsbD0iI2Q2YTU2YiIvPjxwYXRoIGQ9Ik00MDAgNDQwYy00MC0zMC0yMC02MCAwLTQwIDIwLTIwIDQwIDEwIDAgNDB6IiBmaWxsPSIjZTExZDQ4Ii8+PC9zdmc+" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ccfbf1'/%3E%3Cstop offset='1' stop-color='%2367e8f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Cpath d='M400 220v160M320 300h160' stroke='%230d9488' stroke-width='28' stroke-linecap='round'/%3E%3C/svg%3E'" alt="Pediatric care" /><div class="cap">Child-friendly care</div></div>
+      </div>
+      <p class="text-xs text-slate-400 text-center mt-4">Illustrations. Replace them with real photos of the hospital.</p>
+    </div>
+  </section>
+
+  <section id="doctors" class="py-16 sm:py-24 bg-slate-50 border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-medical-teal">Medical Team &amp; Schedule</span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-medical-navy mt-2">
+            Doctors &amp; OP Consultation Timings
+          </h2>
+        </div>
+        <p class="text-sm text-slate-600 max-w-md">
+          Confirm same-day token availability directly via WhatsApp before arriving at the hospital.
+        </p>
+      </div>
+
+      <!-- Editable Doctor Profile Cards -->
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Doctor Card 1: Chief Pediatrician & Neonatologist -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-teal-50 border border-teal-200 text-medical-teal flex items-center justify-center font-heading font-extrabold text-lg shrink-0">
+                DR
+              </div>
+              <div>
+                <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-medical-teal bg-teal-50 px-2.5 py-0.5 rounded-md">
+                  Neonatology &amp; Pediatrics
+                </span>
+                <h3 class="font-heading text-lg font-bold text-medical-navy mt-1">
+                  Chief Pediatrician &amp; Neonatologist
+                </h3>
+                <p class="text-xs text-slate-500">MBBS, MD (Pediatrics) • Newborn &amp; Child Specialist</p>
+              </div>
+            </div>
+
+            <div class="mt-5 bg-slate-50 rounded-xl p-3.5 border border-slate-200/80 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Morning OP:</span>
+                <span data-op-morning class="font-bold text-slate-800">9:30 AM – 1:30 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Evening OP:</span>
+                <span data-op-evening class="font-bold text-slate-800">5:30 PM – 9:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Emergency NICU:</span>
+                <span class="font-bold text-medical-teal">24 Hours Available</span>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onclick="selectDepartmentAndScroll('Neonatal & NICU Care')"
+            class="mt-5 w-full py-2.5 px-4 rounded-xl bg-teal-50 hover:bg-medical-teal text-medical-teal hover:text-white font-semibold text-xs transition-colors border border-teal-200 cursor-pointer"
+          >
+            Book Pediatric / Newborn OP
+          </button>
+        </div>
+
+        <!-- Doctor Card 2: Consultant Obstetrician & Gynecologist -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center justify-center font-heading font-extrabold text-lg shrink-0">
+                DR
+              </div>
+              <div>
+                <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md">
+                  Maternity &amp; Women's Care
+                </span>
+                <h3 class="font-heading text-lg font-bold text-medical-navy mt-1">
+                  Consultant Obstetrician &amp; Gynecologist
+                </h3>
+                <p class="text-xs text-slate-500">MBBS, DGO / MS (OBG) • Antenatal &amp; Delivery Care</p>
+              </div>
+            </div>
+
+            <div class="mt-5 bg-slate-50 rounded-xl p-3.5 border border-slate-200/80 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Morning OP:</span>
+                <span data-op-morning class="font-bold text-slate-800">10:00 AM – 1:30 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Evening OP:</span>
+                <span data-op-evening class="font-bold text-slate-800">5:30 PM – 8:30 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Labour &amp; Maternity:</span>
+                <span class="font-bold text-emerald-700">24/7 Duty Care</span>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onclick="selectDepartmentAndScroll('Maternity & Women\'s Health')"
+            class="mt-5 w-full py-2.5 px-4 rounded-xl bg-teal-50 hover:bg-medical-teal text-medical-teal hover:text-white font-semibold text-xs transition-colors border border-teal-200 cursor-pointer"
+          >
+            Book Maternity OP
+          </button>
+        </div>
+
+        <!-- Doctor Card 3: Senior General Physician -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-200 text-sky-700 flex items-center justify-center font-heading font-extrabold text-lg shrink-0">
+                DR
+              </div>
+              <div>
+                <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-sky-700 bg-sky-50 px-2.5 py-0.5 rounded-md">
+                  Family &amp; General Medicine
+                </span>
+                <h3 class="font-heading text-lg font-bold text-medical-navy mt-1">
+                  Senior General Physician
+                </h3>
+                <p class="text-xs text-slate-500">MBBS, MD • Fever, Diabetes &amp; Family Healthcare</p>
+              </div>
+            </div>
+
+            <div class="mt-5 bg-slate-50 rounded-xl p-3.5 border border-slate-200/80 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Morning OP:</span>
+                <span data-op-morning class="font-bold text-slate-800">9:30 AM – 1:30 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Evening OP:</span>
+                <span data-op-evening class="font-bold text-slate-800">5:30 PM – 9:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Sunday OP:</span>
+                <span data-op-sunday class="font-bold text-sky-700">10:00 AM – 1:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onclick="selectDepartmentAndScroll('General Medicine')"
+            class="mt-5 w-full py-2.5 px-4 rounded-xl bg-teal-50 hover:bg-medical-teal text-medical-teal hover:text-white font-semibold text-xs transition-colors border border-teal-200 cursor-pointer"
+          >
+            Book General OP
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. WHATSAPP OP APPOINTMENT BOOKING & GOOGLE MAPS LOCATION CARD        -->
+  <!-- ===================================================================== -->
+
+  <!-- FAQ + CTA -->
+  <section class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200/80">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-medical-navy text-center reveal">Questions families ask us</h2>
+      <div class="mt-10 space-y-3">
+        <details class="faq reveal bg-white border border-slate-200 rounded-2xl p-5" open><summary class="flex justify-between items-center font-bold text-slate-900">When is the OP open?<svg class="chev w-5 h-5 text-medical-teal" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></summary><p class="ans text-sm text-slate-600 mt-3">Morning 9:30 AM – 1:30 PM and evening 5:30 PM – 9:00 PM. General medicine also has a Sunday OP, 10:00 AM – 1:00 PM. Emergency care runs 24/7.</p></details>
+        <details class="faq reveal bg-white border border-slate-200 rounded-2xl p-5"><summary class="flex justify-between items-center font-bold text-slate-900">How do I book a token?<svg class="chev w-5 h-5 text-medical-teal" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></summary><p class="ans text-sm text-slate-600 mt-3">Fill in the booking form below. It opens WhatsApp with your details ready to send to reception, who confirm your token.</p></details>
+        <details class="faq reveal bg-white border border-slate-200 rounded-2xl p-5"><summary class="flex justify-between items-center font-bold text-slate-900">Is there a pharmacy and lab on site?<svg class="chev w-5 h-5 text-medical-teal" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></summary><p class="ans text-sm text-slate-600 mt-3">Yes. Blood tests, newborn screening, ECG and a pharmacy with pediatric syrups, vaccines and prescription medicines are all in the building.</p></details>
+        <details class="faq reveal bg-white border border-slate-200 rounded-2xl p-5"><summary class="flex justify-between items-center font-bold text-slate-900">Where are you located?<svg class="chev w-5 h-5 text-medical-teal" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></summary><p class="ans text-sm text-slate-600 mt-3">Puthu Road, near Reliance Petrol Bunk, Kovilpatti 628501. Use the map link in the location card for directions.</p></details>
+      </div>
+      <div class="reveal mt-12 rounded-3xl bg-gradient-to-br from-teal-600 to-cyan-700 text-white p-8 text-center relative overflow-hidden">
+        <div class="blob w-48 h-48 bg-white -top-10 -right-10 opacity-20"></div>
+        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold relative">Need to see a doctor today?</h3>
+        <p class="text-teal-50 mt-2 text-sm relative">Message reception to check token availability.</p>
+        <button type="button" onclick="openWhatsAppGeneral('Hello S.R. Hospital and Neocare! Is a token available today?')" class="btn-shine wa-ring relative mt-6 bg-white text-teal-700 font-bold px-7 py-3.5 rounded-xl cursor-pointer">Message reception on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="appointment" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        
+        <!-- Left Column: Direct WhatsApp OP Appointment Booking Form (7 cols) -->
+        <div class="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+          <span class="text-xs font-bold uppercase tracking-widest text-medical-teal">Fast Token Confirmation</span>
+          <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-medical-navy mt-2">
+            Book OP Appointment on WhatsApp
+          </h2>
+          <p class="text-sm text-slate-600 mt-2">
+            Fill in the patient details below and tap the button to send your OP appointment request directly to our reception desk (<strong data-hospital-phone-display class="text-slate-800">+91 96779 57693</strong>).
+          </p>
+
+          <!-- Inline Validation Message Box (Never uses alert()) -->
+          <div id="form-feedback" class="hidden mt-4 p-3.5 rounded-xl bg-amber-50 border border-amber-300 text-amber-800 text-sm font-medium">
+            Please enter the patient's name and contact phone number to book an OP slot.
+          </div>
+
+          <form id="op-booking-form" class="mt-6 space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- Patient Name -->
+              <div>
+                <label for="patient-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                  Patient Name *
+                </label>
+                <input
+                  type="text"
+                  id="patient-name"
+                  placeholder="e.g., Baby Aarav / Mrs. Priya"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-medical-teal focus:ring-2 focus:ring-teal-500/20 transition-all"
+                />
+              </div>
+
+              <!-- Patient Age & Contact Phone -->
+              <div>
+                <label for="patient-age-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                  Age &amp; Contact Phone *
+                </label>
+                <input
+                  type="text"
+                  id="patient-age-phone"
+                  placeholder="e.g., 2 Yrs • 98765 43210"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-medical-teal focus:ring-2 focus:ring-teal-500/20 transition-all"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- Department Selector -->
+              <div>
+                <label for="patient-department" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                  Department
+                </label>
+                <select
+                  id="patient-department"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 focus:outline-none focus:border-medical-teal focus:ring-2 focus:ring-teal-500/20 transition-all"
+                >
+                  <option value="Neonatal & NICU Care">Neonatal &amp; NICU Care</option>
+                  <option value="Pediatrics & Child Care">Pediatrics &amp; Child Care</option>
+                  <option value="Maternity & Women's Health">Maternity &amp; Women's Health</option>
+                  <option value="General Medicine">General Medicine</option>
+                  <option value="Diagnostics & Lab">Diagnostics &amp; Lab</option>
+                </select>
+              </div>
+
+              <!-- Preferred Date -->
+              <div>
+                <label for="appointment-date" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                  Preferred Date
+                </label>
+                <input
+                  type="date"
+                  id="appointment-date"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 focus:outline-none focus:border-medical-teal focus:ring-2 focus:ring-teal-500/20 transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Preferred OP Slot -->
+            <div>
+              <span class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                Preferred OP Slot
+              </span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label class="cursor-pointer">
+                  <input type="radio" name="op-slot" value="Morning OP (9:30 AM – 1:30 PM)" checked class="peer sr-only" />
+                  <div class="p-3.5 rounded-xl bg-white border border-slate-300 peer-checked:border-medical-teal peer-checked:bg-teal-50/70 transition-all flex items-center justify-between">
+                    <div>
+                      <p class="text-sm font-bold text-slate-900">Morning OP</p>
+                      <p data-op-morning class="text-xs text-slate-500">9:30 AM – 1:30 PM</p>
+                    </div>
+                    <span class="w-4 h-4 rounded-full border-2 border-slate-300 peer-checked:border-medical-teal peer-checked:bg-medical-teal"></span>
+                  </div>
+                </label>
+
+                <label class="cursor-pointer">
+                  <input type="radio" name="op-slot" value="Evening OP (5:30 PM – 9:00 PM)" class="peer sr-only" />
+                  <div class="p-3.5 rounded-xl bg-white border border-slate-300 peer-checked:border-medical-teal peer-checked:bg-teal-50/70 transition-all flex items-center justify-between">
+                    <div>
+                      <p class="text-sm font-bold text-slate-900">Evening OP</p>
+                      <p data-op-evening class="text-xs text-slate-500">5:30 PM – 9:00 PM</p>
+                    </div>
+                    <span class="w-4 h-4 rounded-full border-2 border-slate-300 peer-checked:border-medical-teal peer-checked:bg-medical-teal"></span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="w-full py-4 px-6 rounded-xl bg-medical-teal hover:bg-medical-tealDark text-white font-bold text-base transition-all shadow-lg shadow-teal-600/20 flex items-center justify-center gap-2.5 cursor-pointer"
+            >
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+              Confirm OP Slot via WhatsApp
+            </button>
+          </form>
+        </div>
+
+        <!-- Right Column: Google Maps Location & Reception Card (5 cols) -->
+        <div id="location" class="lg:col-span-5 bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+          <span class="text-xs font-bold uppercase tracking-widest text-medical-teal">Hospital Location</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-medical-navy mt-2">
+            Reach Us Easily in Kovilpatti
+          </h2>
+
+          <div class="mt-6 space-y-5">
+            <!-- Address -->
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-teal-50 text-medical-teal flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-sm">Hospital Address</h3>
+                <p data-hospital-address class="text-sm text-slate-600 mt-1 leading-relaxed">
+                  Puthu Road, Near Reliance Petrol Bunk, Kovilpatti, Tamil Nadu 628501
+                </p>
+                <a
+                  id="maps-link"
+                  href="https://www.google.com/maps/search/?api=1&query=S.R.+Hospital+and+Neocare+Puthu+Road+Kovilpatti"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-xs font-bold text-medical-teal hover:underline mt-2"
+                >
+                  Open Directions in Google Maps →
+                </a>
+              </div>
+            </div>
+
+            <!-- Interactive Map Visual Card -->
+            <a
+              id="map-card-link"
+              href="https://www.google.com/maps/search/?api=1&query=S.R.+Hospital+and+Neocare+Puthu+Road+Kovilpatti"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block group relative rounded-2xl overflow-hidden border border-slate-200 bg-teal-50/60 p-5 hover:border-medical-teal transition-all"
+            >
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-medical-teal bg-white px-2.5 py-1 rounded-full border border-teal-200">
+                    Google Maps Landmark
+                  </span>
+                  <p class="font-heading text-base font-bold text-medical-navy mt-2">
+                    Near Reliance Petrol Bunk, Puthu Road
+                  </p>
+                  <p class="text-xs text-slate-600 mt-0.5">
+                    Tap for turn-by-turn GPS navigation to the hospital entrance
+                  </p>
+                </div>
+                <div class="w-11 h-11 rounded-xl bg-medical-teal text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+
+            <!-- Emergency & Reception Contact -->
+            <div class="flex items-start gap-3.5 pt-4 border-t border-slate-200">
+              <div class="w-10 h-10 rounded-xl bg-teal-50 text-medical-teal flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-sm">24/7 Reception &amp; Emergency</h3>
+                <div class="mt-1.5 flex flex-wrap items-center gap-3">
+                  <a
+                    id="footer-call-link"
+                    href="tel:+919677957693"
+                    data-hospital-phone-display
+                    class="text-sm font-bold text-medical-navy hover:text-medical-teal transition-colors"
+                  >
+                    +91 96779 57693
+                  </a>
+                  <span class="text-slate-300">•</span>
+                  <button
+                    type="button"
+                    onclick="openWhatsAppGeneral('Hello S.R. Hospital and Neocare! I have an inquiry regarding doctor availability and OP timings.')"
+                    class="text-xs font-bold text-[#16a34a] hover:underline cursor-pointer"
+                  >
+                    WhatsApp Reception →
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7. CLEAN CLINICAL FOOTER                                              -->
+  <!-- ===================================================================== -->
+  <footer class="bg-medical-navy text-slate-300 py-10 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        <span data-hospital-name class="font-heading text-lg font-extrabold text-white">S.R. Hospital and Neocare</span>
+        <p class="text-xs text-slate-400 mt-1">
+          © <span id="current-year"></span> <span data-hospital-name>S.R. Hospital and Neocare</span> • Kovilpatti, Tamil Nadu. All rights reserved.
+        </p>
+      </div>
+      <div class="flex items-center gap-6 text-xs font-semibold text-slate-300">
+        <a href="#departments" class="hover:text-teal-300 transition-colors">Departments</a>
+        <a href="#doctors" class="hover:text-teal-300 transition-colors">OP Timings</a>
+        <a href="#appointment" class="hover:text-teal-300 transition-colors">Book Appointment</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- 8. FLOATING WHATSAPP RECEPTION BUTTON                                 -->
+  <!-- ===================================================================== -->
+  <button
+    type="button"
+    aria-label="WhatsApp Reception Desk"
+    onclick="openWhatsAppGeneral('Hello S.R. Hospital and Neocare! I would like to check doctor availability and book an OP appointment.')"
+    class="fixed bottom-5 right-5 z-50 wa-ring w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-xl shadow-slate-900/25 flex items-center justify-center hover:scale-105 transition-transform cursor-pointer"
+  >
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+    </svg>
+  </button>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT: REUSABLE HOSPITAL_CONFIG & WHATSAPP APPOINTMENT LOGIC     -->
+  <!-- ===================================================================== -->
+  <script>
+    /**
+     * =======================================================================
+     * HOSPITAL CONFIGURATION — EASY 2-MINUTE CLONING FOR OTHER HOSPITALS
+     * Swap the values below to adapt this site for Jayashri Hospital
+     * (919489924050, Ilayarasanenthal Rd) or Mithra Hospital (918220713993).
+     * =======================================================================
+     */
+    const HOSPITAL_CONFIG = {
+      name: "S.R. Hospital and Neocare",
+      tagline: "Neonatal • Pediatric • Family Care • Kovilpatti",
+      whatsappNumber: "919677957693",
+      phoneDisplay: "+91 96779 57693",
+      phoneTel: "+919677957693",
+      shortAddress: "Puthu Road, Near Reliance Petrol Bunk, Kovilpatti 628501",
+      fullAddress: "Puthu Road, Near Reliance Petrol Bunk, Kovilpatti, Tamil Nadu 628501",
+      ratingText: "Trusted by 100+ Families in Kovilpatti",
+      opMorning: "9:30 AM – 1:30 PM",
+      opEvening: "5:30 PM – 9:00 PM",
+      opSunday: "10:00 AM – 1:00 PM",
+      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=S.R.+Hospital+and+Neocare+Puthu+Road+Kovilpatti"
+    };
+
+    // Hydrate page fields from HOSPITAL_CONFIG on initial load
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = `${HOSPITAL_CONFIG.name} | Neonatal, Pediatric & Family Healthcare in Kovilpatti`;
+
+      document.querySelectorAll("[data-hospital-name]").forEach(el => {
+        el.textContent = HOSPITAL_CONFIG.name;
+      });
+      document.querySelectorAll("[data-hospital-tagline]").forEach(el => {
+        el.textContent = HOSPITAL_CONFIG.tagline;
+      });
+      document.querySelectorAll("[data-hospital-short-address]").forEach(el => {
+        el.textContent = HOSPITAL_CONFIG.shortAddress;
+      });
+      document.querySelectorAll("[data-hospital-address]").forEach(el => {
+        el.textContent = HOSPITAL_CONFIG.fullAddress;
+      });
+      document.querySelectorAll("[data-hospital-phone-display]").forEach(el => {
+        el.textContent = HOSPITAL_CONFIG.phoneDisplay;
+      });
+      document.querySelectorAll("[data-rating-text]").forEach(el => {
+        el.textContent = HOSPITAL_CONFIG.ratingText;
+      });
+      document.querySelectorAll("[data-op-morning]").forEach(el => {
+        el.textContent = HOSPITAL_CONFIG.opMorning;
+      });
+      document.querySelectorAll("[data-op-evening]").forEach(el => {
+        el.textContent = HOSPITAL_CONFIG.opEvening;
+      });
+      document.querySelectorAll("[data-op-sunday]").forEach(el => {
+        el.textContent = HOSPITAL_CONFIG.opSunday;
+      });
+      document.querySelectorAll("[data-op-summary]").forEach(el => {
+        el.textContent = `Morning: ${HOSPITAL_CONFIG.opMorning} • Evening: ${HOSPITAL_CONFIG.opEvening}`;
+      });
+
+      ["top-call-link", "hero-call-link", "footer-call-link"].forEach(id => {
+        const link = document.getElementById(id);
+        if (link) link.href = `tel:${HOSPITAL_CONFIG.phoneTel}`;
+      });
+
+      ["maps-link", "map-card-link"].forEach(id => {
+        const link = document.getElementById(id);
+        if (link) link.href = HOSPITAL_CONFIG.googleMapsUrl;
+      });
+
+      // Set default appointment date input to today's date
+      const dateInput = document.getElementById("appointment-date");
+      if (dateInput) {
+        const today = new Date().toISOString().split("T")[0];
+        dateInput.value = today;
+        dateInput.min = today;
+      }
+
+      const yearSpan = document.getElementById("current-year");
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+
+    // Helper: Launch WhatsApp with formatted text
+    function launchWhatsApp(messageText) {
+      try {
+        const cleanPhone = HOSPITAL_CONFIG.whatsappNumber.replace(/\D/g, "");
+        const encodedText = encodeURIComponent(messageText);
+        const url = `https://wa.me/${cleanPhone}?text=${encodedText}`;
+        window.open(url, "_blank", "noopener,noreferrer");
+      } catch (err) {
+        console.error("Could not open WhatsApp URL:", err);
+      }
+    }
+
+    // General WhatsApp reception inquiry
+    function openWhatsAppGeneral(introText) {
+      const msg = `${introText}\n\nHospital: ${HOSPITAL_CONFIG.name}, Kovilpatti`;
+      launchWhatsApp(msg);
+    }
+
+    // Pre-select department from Doctor/Department cards and scroll smoothly to booking form
+    function selectDepartmentAndScroll(deptName) {
+      const deptSelect = document.getElementById("patient-department");
+      if (deptSelect) {
+        for (let i = 0; i < deptSelect.options.length; i++) {
+          if (deptSelect.options[i].value === deptName) {
+            deptSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      const section = document.getElementById("appointment");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    // OP Appointment Form Submission Handler
+    const bookingForm = document.getElementById("op-booking-form");
+    const feedbackBox = document.getElementById("form-feedback");
+
+    if (bookingForm) {
+      bookingForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nameInput = document.getElementById("patient-name");
+        const agePhoneInput = document.getElementById("patient-age-phone");
+        const deptSelect = document.getElementById("patient-department");
+        const dateInput = document.getElementById("appointment-date");
+        const slotRadio = document.querySelector('input[name="op-slot"]:checked');
+
+        const patientName = nameInput ? nameInput.value.trim() : "";
+        const agePhone = agePhoneInput ? agePhoneInput.value.trim() : "";
+
+        if (!patientName || !agePhone) {
+          if (feedbackBox) feedbackBox.classList.remove("hidden");
+          if (!patientName && nameInput) nameInput.focus();
+          else if (agePhoneInput) agePhoneInput.focus();
+          return;
+        }
+
+        if (feedbackBox) feedbackBox.classList.add("hidden");
+
+        const department = deptSelect ? deptSelect.value : "Neonatal & NICU Care";
+        const preferredDate = dateInput && dateInput.value ? dateInput.value : "Today";
+        const opSlot = slotRadio ? slotRadio.value : `Morning OP (${HOSPITAL_CONFIG.opMorning})`;
+
+        const message =
+          `Hello ${HOSPITAL_CONFIG.name}! I would like to request an *OP Appointment*.\n\n` +
+          `• *Patient Name:* ${patientName}\n` +
+          `• *Age / Phone:* ${agePhone}\n` +
+          `• *Department:* ${department}\n` +
+          `• *Preferred Date:* ${preferredDate}\n` +
+          `• *Preferred Slot:* ${opSlot}\n\n` +
+          `Please confirm token availability. Thank you!`;
+
+        launchWhatsApp(message);
+      });
+    }
+
+    // Mobile Menu Toggle Logic
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const iconOpen = document.getElementById("menu-icon-open");
+    const iconClose = document.getElementById("menu-icon-close");
+
+    function toggleMobileMenu() {
+      const isHidden = mobileMenu.classList.contains("hidden");
+      if (isHidden) {
+        mobileMenu.classList.remove("hidden");
+        iconOpen.classList.add("hidden");
+        iconClose.classList.remove("hidden");
+      } else {
+        mobileMenu.classList.add("hidden");
+        iconOpen.classList.remove("hidden");
+        iconClose.classList.add("hidden");
+      }
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener("click", toggleMobileMenu);
+    }
+
+    document.querySelectorAll(".mobile-nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        if (!mobileMenu.classList.contains("hidden")) {
+          toggleMobileMenu();
+        }
+      });
+    });
+  </script>
+
+  <div id="progress"></div>
+  <button id="to-top" type="button" aria-label="Back to top" class="w-11 h-11 rounded-full bg-medical-navy text-white shadow-lg flex items-center justify-center hover:bg-medical-teal cursor-pointer"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg></button>
+  <script>
+    (function(){
+      const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('#departments .grid > div, #doctors .grid > div, #appointment .grid > div').forEach((el,i)=>{el.classList.add('reveal','tilt');el.style.transitionDelay=(i%3)*90+'ms';setTimeout(()=>el.style.transitionDelay='0ms',2500)});
+      document.querySelectorAll('a.bg-medical-teal, button.bg-medical-teal, button[type=submit], #hero-call-link').forEach(b=>b.classList.add('btn-shine'));
+      const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+      const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);
+        const el=e.target,end=parseFloat(el.dataset.count),d=+el.dataset.dec||0,t0=performance.now();
+        (function f(t){const k=Math.min((t-t0)/1400,1),v=end*(1-Math.pow(1-k,3));el.textContent=v.toFixed(d);if(k<1&&!rm)requestAnimationFrame(f);else el.textContent=end.toFixed(d)})(t0)}),{threshold:.6});
+      document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+      const bar=document.getElementById('progress'),top=document.getElementById('to-top');
+      addEventListener('scroll',()=>{const h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.width=(m?scrollY/m*100:0)+'%';top.classList.toggle('show',scrollY>600)},{passive:true});
+      top.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+      document.addEventListener('click',e=>{const b=e.target.closest('.btn-shine');if(!b||rm)return;const r=b.getBoundingClientRect(),s=Math.max(r.width,r.height),d=document.createElement('span');d.className='ripple-dot';d.style.cssText='width:'+s+'px;height:'+s+'px;left:'+(e.clientX-r.left-s/2)+'px;top:'+(e.clientY-r.top-s/2)+'px';b.appendChild(d);setTimeout(()=>d.remove(),600)});
+      if(!rm&&matchMedia('(hover:hover)').matches)document.querySelectorAll('.tilt').forEach(c=>{
+        c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(800px) rotateY('+x*6+'deg) rotateX('+-y*6+'deg) translateY(-4px)'});
+        c.addEventListener('mouseleave',()=>c.style.transform='')});
+    })();
+  </script>
+</body>
+</html>
